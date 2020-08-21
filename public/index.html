@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/favicon.png?v=1" type="image/x-icon">
-    <title>Boilerplate App</title>
-</head>
-<body>
-    <h1>Boilerplate</h1>
-    <script src="/scripts/bundle.js"></script>
-</body>
+<html>
+   <head>
+      <title>Notes App</title>
+      <link rel="shortcut icon" href="/images/favicon2.png" type="image/x-icon">
+      <link rel="stylesheet" href="/styles/styles.css">
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <h1 class='header__title'>Notes App</h1>
+            <h2 class='header__subtitle'>Take Notes and Never Forget!</h2>
+         </div>
+      </header>
+
+      <div class="actions">
+         <div class="actions__container">
+            <div class="actions__container--spaced">
+               <span id="search">
+                  <input id="search_text" type="text" placeholder="filter notes" class='input'>
+
+                  <select id="filter_by" class='dropdown'>
+                     <option value="byEdited">sort by last edited</option>
+                     <option value="byCreated">sort by recently created</option>
+                     <option value="alphabetical">sort alphabetically</option>
+                  </select>
+               </span>
+               
+               <span id="newnote">
+                  <button id='create_note' class='button'>Create Note</button>
+               </span>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div id="notes"></div>
+      </div>
+      
+      
+
+      <script src="/scripts/index-bundle.js"></script>
+   </body>
 </html>
